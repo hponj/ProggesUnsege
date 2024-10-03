@@ -1,0 +1,663 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Rose:wght@300..700&family=Russo+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&family=Jacques+Francois+Shadow&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    border: none;
+    scroll-behavior: smooth;
+}
+
+#Home{
+    background-color: black;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#Home .navbar-h{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+    width: 90%;
+}
+
+#Home .navbar-h img{
+    width: 50px;
+    height: 50px;
+}
+
+#Home .navbar-h a{
+    color: rgba(255, 255, 255, 0.656);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    transition: .2s;
+}
+
+#Home .navbar-h a:hover{
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+}
+
+#Home .navbar-h h1{
+    color: white;
+    font-family: "Russo one", sans-serif;
+    font-size: 4rem;
+    font-weight: normal;
+    display: none;
+}
+
+#Home .text{
+    position: sticky;
+    top: 0;
+    padding-top: 2rem;
+}
+
+
+#Home .text h2{
+    color: white;
+    font-size: 3rem;
+    font-family: "arial";
+    font-weight: 100;
+    text-align: left;
+
+}
+
+#Home .text h1{
+    font-size: 10rem;
+    font-family: "poppins";
+    -webkit-text-stroke: 2px #ffffff;
+    background-color: black;
+    line-height: 0.8;
+}
+
+#Home .text p{
+    font-size: 3rem;
+    color: white;
+    font-family: "red rose" ;
+}
+
+#Home #img-us{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    filter: saturate(0);
+    transition: .2s;
+}
+
+#Home #img-us:hover{
+    filter: saturate(100%);
+    transform: translateY(-12px);
+}
+
+#Home::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: rgb(2,0,36);
+    background: linear-gradient(189deg, rgba(2,0,36,0) 0%, rgba(0,0,0,1) 99%);
+    bottom: 0;
+}
+
+/* navbar */
+
+nav{
+    position: sticky;
+    display: flex;
+    background-color: black;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2px 7% 2px 7%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    box-shadow: 0px 7px 9px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 7px 9px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 7px 9px 0px rgba(0,0,0,0.75);
+}
+
+nav #logo img{
+    height: 50px;
+    width: 50px; 
+    padding: 5px;
+}
+
+nav .nav-link a{
+    color: rgb(190, 190, 190);
+    font-size: 1.5rem;
+    margin: 0 5px 0px 5px;
+    font-family: "inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: .5s;
+    position: relative;
+    padding-bottom: 5px;
+
+}
+
+nav .nav-link a::after{
+    color: white;
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(248, 244, 244);
+    transform-origin: bottom;
+    transition: transform 0.25s ease-out;
+
+}
+
+nav .nav-link a:hover{
+    color: white;
+}
+
+nav .nav-link a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom ;
+  }
+  
+
+nav .toggle{
+    display: none;
+    cursor: pointer;
+    color: rgb(216, 213, 213);
+    font-size: 3rem;
+}
+
+nav .toggle:hover{
+    color: #f8fafb;
+}
+
+nav .log-tog{
+    display: flex;
+    justify-content: space-between;
+    width: 0%;
+}
+/* About section */
+
+#AboutUS{
+    background-color: black;
+    padding: 8rem 7% 1.4rem;
+    
+}
+
+#AboutUS .box{
+    display: flex;
+    justify-content: space-between;
+}
+
+#AboutUS .box .text{
+margin: 1rem 1rem  0 0 ;
+max-width: 50%;
+} 
+
+#AboutUS .box .text p{
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+}
+
+.swiper {
+    width: 350px;
+    height: 400px;
+    -ms-overflow-style: none;
+}
+
+.swiper::-webkit-scrollbar{
+    display: none;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0);
+    transition: .2s;
+    border-radius: 5px;
+}
+
+.swiper-slide img:hover{
+    filter: saturate(100%);
+    transform: translateY(-12px);
+}
+
+#AboutUS h2{
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 4rem;
+    font-family: "Poppins", sans-serif;
+}
+
+#AboutUS h2 span{
+    -webkit-text-stroke: 2px white;
+    color: black;
+    font-family: "LOra";
+    transition: .2s;
+
+}
+
+#AboutUS h2 span:hover{
+    font-size: 5rem;
+}
+
+#AboutUS .box .text h3{
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem
+    
+}
+
+#AboutUS .box .text h3 span{
+    font-size: 1.6rem;
+    font-family: "Red Rose";
+    border-bottom: 1px solid white;
+}
+
+/* Our creation */
+
+#OurCreation{
+    background-color: black;
+    padding: 8rem 7% 1.4rem;
+    
+}
+
+#OurCreation h2{
+    color: white;
+    text-align: left;
+    margin-bottom: 1rem;
+    font-size: 4rem;
+    font-family: "Jacques Francois Shadow", system-ui;
+}
+
+#OurCreation h2 span{
+    color: rgb(255, 255, 255);
+    font-family: "Jacquard 12", system-ui;
+    transition: .2s;
+
+}
+
+#OurCreation p{
+    color: white;
+    font-size: 2rem;
+    max-width: 70%;
+}
+
+#OurCreation .container .sel{
+    margin-top: 6rem;
+    background-color: rgb(96, 96, 96);
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 2rem 2rem 0 0 ;
+    display: flex;
+    max-width: 25%;
+    justify-content: space-between;
+    align-items: center;
+     
+}
+
+#OurCreation .container  .sel p{
+    color: rgb(220, 220, 220);
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+#OurCreation .container  .sel #closeX{
+    font-size: 2.1rem;
+    color: rgb(190, 190, 190);
+    border-radius: 50%;
+}
+
+#OurCreation .container  .sel #closeX:hover{
+    color: rgb(161, 160, 160)
+}
+
+#OurCreation .container  .box-f{
+    display: flex;
+    background-color: rgb(96, 96, 96);
+    width: 100%;
+    overflow-y: scroll;
+    border-radius: 0rem 2rem 0rem 0rem;
+    align-items: center;
+}
+
+#OurCreation .container  .box-f::-webkit-scrollbar{
+    display: none;
+}
+
+#OurCreation .container  .box-f .arrow{
+    display: flex;
+    margin: 0rem 0rem 0.5rem 1rem;
+}
+
+#OurCreation .container  .box-f .arrow i{
+    color: white;
+    font-size: 2rem;
+    padding: 5px 10px 5px 10px;
+    margin-right: 5px;
+    border-radius: 1rem;
+}
+
+#OurCreation .container  .box-f .arrow i:hover{
+    background-color: rgb(110, 110, 110);
+}
+
+
+#OurCreation .container  .box-f #location{
+    background-color: black;
+    width: 100%;
+    border-radius: 2rem;
+    padding-left: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 2rem;
+    display: flex;
+}
+
+
+#OurCreation .container .box{
+    width: 100%;
+    border-radius: 0rem 0rem 2rem 2rem;
+    background-color: rgb(55, 55, 55);
+
+    height: 30rem;
+    overflow-y: scroll;
+}
+
+#OurCreation .container .box::-webkit-scrollbar {
+    display: none;
+}
+
+#OurCreation .container h3{
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+
+}
+
+#OurCreation .container .box-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#OurCreation .container .box-container .box-card, #OurCreation .container .box-container .box-card-main {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 25%;
+    margin: 1rem;
+    transition: .2s;
+}
+
+
+#OurCreation .container .box-container .box-card h4, #OurCreation .container .box-container .box-card-main h4{
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    transition: .2s;
+    width: 100%;
+}
+
+#OurCreation .container .box-container .box-card img, #OurCreation .container .box-container .box-card-main img{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1rem;
+    filter: saturate(0);
+    transition: .2s;
+    
+}
+
+#OurCreation .container .box-container .box-card:hover{
+    background-color: rgb(109, 109, 109);
+}
+
+#OurCreation .container .box-container .box-card-main:hover{
+    background-color: rgb(109, 109, 109);
+}
+
+#OurCreation .container .box-container .box-card h4:hover{
+    font-size: 2.1rem;
+    font-family: "Jacques Francois Shadow";
+}
+
+#OurCreation .container .box-container .box-card img:hover{
+    filter: saturate(100%);
+    width: 110%;
+}
+
+#OurCreation .container .box-container .box-card-main img:hover{
+    filter: saturate(100%);
+}
+
+#OurCreation .container .box  #Scratch-box{
+    display: none;
+}
+
+
+
+
+/* techer section */
+
+#Teacher{
+    background-color: black;
+    padding: 8rem 7% 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Teacher .logo{
+    width: 100%;
+    height: 100%;
+    max-width: 32rem;
+    transition: .3s;
+}
+
+#Teacher .logo:hover{
+    max-width: 35rem;
+    transform: rotate(-3deg);
+}
+
+#Teacher .box{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    max-width: 25rem;
+}
+
+#Teacher .box .card{
+    background-color: #FFF0CF;
+    padding: 1.5rem;
+    border-radius: 10%;
+}
+
+#Teacher .box .card .num{
+    text-align: right;
+    font-size: 5rem;
+    font-family: Lora;
+    color: rgba(0, 0, 0, 0.442);
+}
+
+#Teacher .box .card .person{
+    width: 50%;
+    max-width: 10rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#Teacher .box .card h4{
+    font-size: 2.5rem;
+    font-family: "Inter";
+    color: red;
+}
+
+#Teacher .box .card p{
+    font-size: 1.5rem;
+    font-family: "arial";
+}
+
+#Teacher .box .card .bar{
+
+    width: 50%;
+    max-width: 4.5rem;
+    margin-top: 1rem;
+    float: right;
+}
+
+#prank{
+    position: absolute;
+    background-color: white;
+    z-index: 200000;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100000000000000000000000%;
+    display: none;
+}
+
+
+@media (max-width: 1366px) {
+    html{
+        font-size: 70%;
+    }
+
+}
+
+@media (max-width: 850px) {
+    html {
+      font-size: 62.5%;
+    }
+
+    #Home .text{
+        padding-top: 15rem;
+    }
+
+
+}
+
+@media (max-width: 640px) {
+    html {
+        font-size: 58%;
+      }
+
+    #Home .navbar-h a{
+        display: none;
+    }
+
+    #Home .navbar-h h1{
+        display: block;
+    }
+
+    #Home #img-us{
+        position: absolute;
+        bottom: 0;
+        height: 35%;
+    }
+
+    #Home .text{
+        padding-top: 10rem;
+    }
+
+    nav .log-tog{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    nav{
+        display: block;
+    }
+
+    #home .text h2{
+        line-height: 60px;
+    }
+
+    
+
+    .nav-link{
+        display: none;
+        flex-direction: column;
+        margin: 5px;
+    }
+
+    .nav-link a{
+        font-size: 2rem !important;
+        padding: 1rem;
+    }
+
+
+
+    nav .toggle{
+        display: block;
+        cursor: pointer;
+    }
+
+    nav #logo img{
+        height: 40px;
+        width: 40px; 
+    }
+
+    #AboutUS .box{
+        flex-direction: column-reverse;
+
+    }
+
+    #AboutUS .box .text{
+        max-width: 100%;
+    }
+
+    .swiper {
+        width: 200px;
+        height: 300px;
+        
+    }
+
+    #OurCreation p{
+        color: white;
+        font-size: 2rem;
+        max-width: 100%;
+    }
+
+    #OurCreation .container .sel{
+        max-width: 35%;
+    }
+
+
+    #OurCreation .container .box-container .box-card h4{
+        font-size: 2rem;
+    }
+
+    #OurCreation .container  .box-f #location{
+        width: 50%;
+    }
+
+
+
+}
+
+@media (max-width: 450px) {
+    html {
+      font-size: 55%;
+    }
+  }
