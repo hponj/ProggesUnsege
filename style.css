@@ -447,7 +447,7 @@ max-width: 50%;
     filter: saturate(100%);
 }
 
-#OurCreation .container .box  #Scratch-box{
+#OurCreation .container .box  .File-Box{
     display: none;
 }
 
